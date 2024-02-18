@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost/happy_tire?serverTimezone=Asia/Shanghai
+    password: woshiXGT.
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #输出SQL日志
+
+server:
+  port: 8080
