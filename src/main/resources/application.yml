@@ -2,8 +2,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    url: jdbc:mysql://localhost/happy_tire?serverTimezone=Asia/Shanghai
-    password: woshiXGT.
+    url: jdbc:mysql://10.36.101.11:3306/happy_tire?serverTimezone=Asia/Shanghai
+    password: 6kjCqjaY
 
 mybatis-plus:
   configuration:
