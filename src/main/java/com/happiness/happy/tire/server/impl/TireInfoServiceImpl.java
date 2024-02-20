@@ -71,13 +71,13 @@ public class TireInfoServiceImpl extends ServiceImpl<TireInfoMapper, TireInfo> i
                     Objects.isNull(size) || size == 0 ? 10 : size);
             QueryWrapper<TireInfo> tireInfoQueryWrapper = new QueryWrapper<>();
             if (StringUtils.isNotBlank(tireInfo.getTireBand())) {
-                tireInfoQueryWrapper.like("TIRE_BAND", tireInfo.getTireBand());
+                tireInfoQueryWrapper.like("TIRE_BAND", tireInfo.getTireBand()).or();
             }
             if (StringUtils.isNotBlank(tireInfo.getTireSize())) {
-                tireInfoQueryWrapper.like("TIRE_SIZE", tireInfo.getTireSize());
+                tireInfoQueryWrapper.like("TIRE_SIZE", tireInfo.getTireSize()).or();
             }
             if (StringUtils.isNotBlank(tireInfo.getTirePattern())) {
-                tireInfoQueryWrapper.like("TIRE_PATTERN", tireInfo.getTirePattern());
+                tireInfoQueryWrapper.like("TIRE_PATTERN", tireInfo.getTirePattern()).or();
             }
             Page<TireInfo> tireInfoPage = tireInfoMapper.selectPage(page, tireInfoQueryWrapper);
             return Response.builder().code(200).msg("查询轮胎分页信息成功").object(tireInfoPage).build();

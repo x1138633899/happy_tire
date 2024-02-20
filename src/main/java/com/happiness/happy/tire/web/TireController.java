@@ -26,7 +26,7 @@ public class TireController {
     private TireOutRecordService tireOutRecordService;
 
     @PostMapping("/info/page")
-    public Response page(@Valid @RequestBody(required = true) TireInfo tireInfo) {
+    public Response page(@RequestBody(required = true) TireInfo tireInfo) {
         return tireInfoService.getPage(tireInfo, tireInfo.getPageNum(), tireInfo.getSize());
     }
 
