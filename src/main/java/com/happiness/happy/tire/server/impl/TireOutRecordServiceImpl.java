@@ -34,7 +34,7 @@ public class TireOutRecordServiceImpl extends ServiceImpl<TireOutRecordMapper, T
                 if (Objects.nonNull(tireInfo)) {
                     Integer tireInfoTireNum = tireInfo.getTireNum();
                     Integer tireNum = tireOutRecord.getTireNum();
-                    int realNum = tireNum - tireInfoTireNum;
+                    int realNum = tireInfoTireNum - tireNum;
                     if (realNum >= 0) {
                         TireInfo updateData = new TireInfo();
                         updateData.setTireId(tireId);
