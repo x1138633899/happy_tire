@@ -13,7 +13,7 @@ import java.sql.Timestamp;
 @Data
 @TableName("tb_tire_info")
 @EqualsAndHashCode(callSuper = true)
-public class TireInfo extends Other implements Serializable {
+public class TireInfo extends QueryParams implements Serializable {
     @TableId
     @ExcelProperty(value = "轮胎ID")
     private String tireId;

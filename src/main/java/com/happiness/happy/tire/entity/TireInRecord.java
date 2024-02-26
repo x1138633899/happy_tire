@@ -14,9 +14,15 @@ import java.sql.Timestamp;
 @Data
 @TableName("tb_tire_in_record")
 @EqualsAndHashCode(callSuper = true)
-public class TireInRecord extends Other implements Serializable {
+public class TireInRecord extends QueryParams implements Serializable {
     @TableId(type = IdType.AUTO)
     private Integer id;
+    @ExcelProperty(value = "轮胎品牌")
+    private String tireBand;
+    @ExcelProperty(value = "轮胎型号")
+    private String tireSize;
+    @ExcelProperty(value = "轮胎花纹")
+    private String tirePattern;
     @ExcelProperty(value = "轮胎ID")
     @NotNull(message = "轮胎ID不能为空")
     private String tireId;

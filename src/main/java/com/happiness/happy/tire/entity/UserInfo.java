@@ -11,7 +11,7 @@ import java.io.Serializable;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
-public class UserInfo extends Other implements Serializable {
+public class UserInfo extends QueryParams implements Serializable {
     @ExcelProperty(value = "用户ID")
     @TableId
     private String userId;
